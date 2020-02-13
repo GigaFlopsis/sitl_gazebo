@@ -334,8 +334,8 @@ set(plugins
   gazebo_gps_plugin
   gazebo_irlock_plugin
   gazebo_lidar_plugin
-  gazebo_opticalflow_mockup_plugin
-  gazebo_opticalflow_plugin
+#  gazebo_opticalflow_mockup_plugin
+#  gazebo_opticalflow_plugin
   gazebo_sonar_plugin
   gazebo_uuv_plugin
   gazebo_vision_plugin
