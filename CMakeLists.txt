@@ -166,7 +166,7 @@ include_directories(
   ${OGRE_INCLUDE_DIRS}
   ${OGRE_INCLUDE_DIRS}/Paging		# Workaround for "fatal error: OgrePagedWorldSection.h: No such file or directory"
   ${OpenCV_INCLUDE_DIRS}
-  ${OpticalFlow_INCLUDE_DIRS}
+#  ${OpticalFlow_INCLUDE_DIRS}
   ${TinyXML_INCLUDE_DIRS}
   )
 
@@ -313,8 +313,8 @@ add_library(gazebo_geotagged_images_plugin SHARED src/gazebo_geotagged_images_pl
 add_library(gazebo_gps_plugin SHARED src/gazebo_gps_plugin.cpp)
 add_library(gazebo_irlock_plugin SHARED src/gazebo_irlock_plugin.cpp)
 add_library(gazebo_lidar_plugin SHARED src/gazebo_lidar_plugin.cpp)
-add_library(gazebo_opticalflow_mockup_plugin SHARED src/gazebo_opticalflow_mockup_plugin.cpp)
-add_library(gazebo_opticalflow_plugin SHARED src/gazebo_opticalflow_plugin.cpp)
+#add_library(gazebo_opticalflow_mockup_plugin SHARED src/gazebo_opticalflow_mockup_plugin.cpp)
+#add_library(gazebo_opticalflow_plugin SHARED src/gazebo_opticalflow_plugin.cpp)
 add_library(gazebo_sonar_plugin SHARED src/gazebo_sonar_plugin.cpp)
 add_library(gazebo_uuv_plugin SHARED src/gazebo_uuv_plugin.cpp)
 add_library(gazebo_vision_plugin SHARED src/gazebo_vision_plugin.cpp)
@@ -354,7 +354,7 @@ set(plugins
 foreach(plugin ${plugins})
   target_link_libraries(${plugin} ${Boost_LIBRARIES} ${GAZEBO_LIBRARIES} ${TinyXML_LIBRARIES})
 endforeach()
-target_link_libraries(gazebo_opticalflow_plugin ${OpticalFlow_LIBS})
+#target_link_libraries(gazebo_opticalflow_plugin ${OpticalFlow_LIBS})
 
 # If BUILD_ROS_INTERFACE set to ON, build plugins that have ROS dependencies
 # Current plugins that can be used with ROS interface: gazebo_motor_failure_plugin
